@@ -5,7 +5,7 @@ const route = useRoute()
 <template>
   <main>
     <nav>
-      <h1>Module Tracker</h1>
+      <h1>Module Progress</h1>
 
       <div class="links">
         <NuxtLink
