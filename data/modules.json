@@ -3,8 +3,8 @@
     "name": "WEBT",
     "coreRequiredSemester": 4,
     "coreRequiredYear": 8,
-    "advRequiredSemester": 1,
-    "advRequiredYear": 2,
+    "advRequiredSemester": 4,
+    "advRequiredYear": 8,
     "coreCompleted": 3,
     "advCompleted": 2,
     "tasks": [
@@ -394,8 +394,8 @@
     "name": "SEW",
     "coreRequiredSemester": 5,
     "coreRequiredYear": 9,
-    "advRequiredSemester": 1,
-    "advRequiredYear": 2,
+    "advRequiredSemester": 4,
+    "advRequiredYear": 8,
     "coreCompleted": 5,
     "advCompleted": 1,
     "tasks": [
@@ -555,8 +555,8 @@
     "name": "CMS",
     "coreRequiredSemester": 3,
     "coreRequiredYear": 5,
-    "advRequiredSemester": 1,
-    "advRequiredYear": 2,
+    "advRequiredSemester": 4,
+    "advRequiredYear": 8,
     "coreCompleted": 4,
     "advCompleted": 1,
     "tasks": [

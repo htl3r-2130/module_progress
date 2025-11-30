@@ -59,12 +59,6 @@ nav h1 {
 .links a:hover {
   background: #2d2d2d;
 }
-/* 
-.router-link-active,
-.router-link-exact-active {
-  background: #3c3c3c;
-  font-weight: 600;
-} */
 
 /* Scrollbar */
 *::-webkit-scrollbar {

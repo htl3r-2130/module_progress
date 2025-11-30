@@ -113,7 +113,7 @@ section {
 .inputs input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #e46b09;  /* nice cyan highlight */
+  accent-color: #e46b09;
   cursor: pointer;
 }
 
