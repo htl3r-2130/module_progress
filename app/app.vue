@@ -1,7 +1,7 @@
 <template>
   <main>
     <nav>
-      <h1>Module Tracker</h1>
+      <h1>Module Progress</h1>
       <div class="links">
         <p>List</p>
         <p>Chart</p>
@@ -62,16 +62,72 @@ async function toggleField(module, task, field) {
 </script>
 
 <style scoped>
-nav {
+
+section {
   display: flex;
-  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* === CARD === */
+.module {
+  flex: 1;
+  background: #2b2b2b;
+  border: 1px solid #3a3a3a;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.module h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+/* === TASK ROWS === */
+.tasks > div {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #3c3c3c;
 }
-.links {
+
+.tasks > div:last-child {
+  border-bottom: none;
+}
+
+/* TEXT PART */
+.info {
   display: flex;
-  justify-content: center;
+  gap: 12px;
+  flex: 1;
   align-items: center;
-  gap: 10px;
+}
+
+.info p:first-child {
+  font-weight: 600;
+  color: #e46b09;
+}
+
+/* CHECKBOXES */
+.inputs {
+  display: flex;
+  gap: 14px;
+}
+
+.inputs input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #e46b09;  /* nice cyan highlight */
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
 }
 </style>

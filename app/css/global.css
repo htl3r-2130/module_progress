@@ -1,0 +1,55 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === GLOBAL THEME === */
+html, body {
+  background-color: #1f1f1f;
+  color: #e6e6e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* === GLOBAL LAYOUT === */
+main {
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #1f1f1f;
+  color: #e6e6e6;
+  min-height: 100vh;
+}
+
+/* === NAVIGATION === */
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+nav h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+}
+
+.links p {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.links p:hover {
+  background: #2d2d2d;
+}
