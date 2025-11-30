@@ -8,8 +8,15 @@ const route = useRoute()
       <h1>Module Tracker</h1>
 
       <div class="links">
-        <NuxtLink to="/">List</NuxtLink>
-        <NuxtLink to="/chart">Chart</NuxtLink>
+        <NuxtLink
+          to="/"
+          :class="{ active: route.path === '/' }"
+        >List</NuxtLink>
+
+        <NuxtLink
+          to="/chart"
+          :class="{ active: route.path === '/chart' }"
+        >Chart</NuxtLink>
       </div>
     </nav>
 
