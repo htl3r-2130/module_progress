@@ -3,5 +3,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     "./app/css/global.css"
-  ]
+  ],
+  app: {
+    head: {
+      title: 'Module Progress',
+    }
+  }
 })

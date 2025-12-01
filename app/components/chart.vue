@@ -33,6 +33,10 @@ const chartOptions = computed(() => ({
   cutout: props.cutout,
   responsive: true,
   maintainAspectRatio: false,
+  animation: {
+    duration: 1200,           // Zeit in ms
+    easing: "easeOutQuart"    // Animationskurve
+  },
   plugins: {
     legend: { display: true },
     tooltip: { enabled: true }

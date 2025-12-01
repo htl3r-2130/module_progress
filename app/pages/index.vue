@@ -4,7 +4,7 @@
       <div v-for="m in modules" :key="m.name" class="module">
         <h2>{{ m.name }}</h2>
         <div class="tasks">
-          <div v-for="t in m.tasks" :key="t.id">
+          <div v-for="t in m.tasks" :key="t.id" :class="{ completed: t.completed }">
             <div class="info">
               <p>{{ t.type }}</p>
               <p>{{ t.number }}</p>
@@ -102,6 +102,10 @@ section {
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #3c3c3c;
+}
+
+.completed {
+  opacity: 0.2;
 }
 
 .tasks > div:last-child {
