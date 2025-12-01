@@ -1,6 +1,5 @@
 <template>
   <main>
-
     <section>
       <div v-for="m in modules" :key="m.name" class="module">
         <h2>{{ m.name }}</h2>
@@ -12,9 +11,21 @@
               <p>{{ t.title }}</p>
             </div>
             <div class="inputs">
-              <input type="checkbox" :checked="t.code" @change="toggleField(m, t,'code')">
-              <input type="checkbox" :checked="t.interview" @change="toggleField(m, t,'interview')">
-              <input type="checkbox" :checked="t.quiz" @change="toggleField(m, t,'quiz')">
+              <input
+                type="checkbox"
+                :checked="t.code"
+                @change="toggleField(m, t, 'code')"
+              />
+              <input
+                type="checkbox"
+                :checked="t.interview"
+                @change="toggleField(m, t, 'interview')"
+              />
+              <input
+                type="checkbox"
+                :checked="t.quiz"
+                @change="toggleField(m, t, 'quiz')"
+              />
             </div>
           </div>
         </div>
@@ -24,7 +35,7 @@
 </template>
 
 <script setup>
-//Lädt Daten als json in modules
+//Daten als json in modules
 const { data: modules, refresh } = await useFetch("/api/modules");
 
 function evaluateTask(task) {
@@ -44,7 +55,14 @@ async function toggleField(module, task, field) {
   task[field] = !task[field];
   evaluateTask(task);
   updateModuleCompletion(module);
+  // const [semester, year] = calculateGrades(
+  //   module.name,
+  //   module.coreCompleted,
+  //   module.advCompleted
+  // );
 
+  // module.semesterGrade = semester;
+  // module.yearGrade = year;
   await $fetch("/api/modules", {
     method: "POST",
     body: modules.value,
@@ -55,7 +73,6 @@ async function toggleField(module, task, field) {
 </script>
 
 <style scoped>
-
 section {
   display: flex;
   gap: 20px;

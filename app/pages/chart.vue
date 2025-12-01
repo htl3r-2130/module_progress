@@ -1,12 +1,9 @@
-<script setup>
-import DonutChart from "~/components/chart.vue";
-const { data: modules } = await useFetch("/api/modules");
-</script>
-
 <template>
   <div class="chart-grid">
     <div v-for="m in modules" :key="m.name" class="subject-card">
       <h2>{{ m.name }}</h2>
+      <p>Grade Semester: {{ m.semesterGrade }}</p>
+      <p>Grade Year: {{ m.yearGrade }}</p>
       <div class="core-charts">
         <div class="chart">
           <DonutChart
@@ -18,7 +15,9 @@ const { data: modules } = await useFetch("/api/modules");
             :size="150"
             cutout="65%"
           />
-          <p>Core Semester {{ m.coreCompleted }}/{{ m.coreRequiredSemester }}</p>
+          <p>
+            Core Semester {{ m.coreCompleted }}/{{ m.coreRequiredSemester }}
+          </p>
         </div>
         <div class="chart">
           <DonutChart
@@ -62,6 +61,76 @@ const { data: modules } = await useFetch("/api/modules");
     </div>
   </div>
 </template>
+
+<script setup>
+import DonutChart from "~/components/chart.vue";
+const { data: modules } = await useFetch("/api/modules");
+modules.value.forEach(m => {
+  const [semester, year] = calculateGrades(
+    m.name,
+    m.coreCompleted,
+    m.advCompleted
+  );
+  m.semesterGrade = semester;
+  m.yearGrade = year;
+});
+
+function calculateGrades(subject, completedCores, completedAdv) {
+  let semesterGrade = 5;
+  let yearGrade = 5;
+
+  switch (subject) {
+    case "WEBT":
+      if (completedCores >= 4) semesterGrade = 4;
+      if (completedCores >= 4) {
+        if (completedAdv >= 1) semesterGrade = 3;
+        if (completedAdv >= 2) semesterGrade = 2;
+        if (completedAdv >= 4) semesterGrade = 1;
+      }
+
+      if (completedCores >= 8) yearGrade = 4;
+      if (completedCores >= 8) {
+        if (completedAdv >= 2) yearGrade = 3;
+        if (completedAdv >= 4) yearGrade = 2;
+        if (completedAdv >= 8) yearGrade = 1;
+      }
+      break;
+
+    case "SEW":
+      if (completedCores >= 5) {
+        semesterGrade = 4;
+        semesterGrade -= Math.min(completedAdv, 3);
+        semesterGrade = Math.max(1, semesterGrade);
+      }
+
+      if (completedCores >= 9) {
+        yearGrade = 4;
+        yearGrade -= Math.floor(completedAdv / 2);
+        yearGrade = Math.max(1, yearGrade);
+      }
+      break;
+
+    case "CMS":
+      if (completedCores >= 3) {
+        semesterGrade = 4;
+        semesterGrade -= Math.min(completedAdv, 3);
+        semesterGrade = Math.max(1, semesterGrade);
+      }
+
+      if (completedCores >= 5) {
+        yearGrade = 4;
+        yearGrade -= Math.floor(completedAdv / 2);
+        yearGrade = Math.max(1, yearGrade);
+      }
+      break;
+
+    default:
+      throw new Error("Unknown subject type: " + subject);
+  }
+
+  return [semesterGrade, yearGrade];
+}
+</script>
 
 <style scoped>
 .chart-grid {
