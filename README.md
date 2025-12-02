@@ -8,6 +8,6 @@ docker build -t module_progress .
 docker run -p 80:3000 module_progress
 ```
 ```bash
-# docker
+# npm
 npm install
 npm run dev
