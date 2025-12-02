@@ -1,11 +1,13 @@
 # Module Progress based on Nuxt.js
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
+## Setup (Either use Docker(-compose) or the npm dev server)
 
 ```bash
-# npm
+# docker
+docker build -t module_progress .
+docker run -p 80:3000 module_progress
+```
+```bash
+# docker
 npm install
+npm run dev
