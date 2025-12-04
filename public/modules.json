@@ -15,38 +15,38 @@
         "type": "CORE",
         "number": "01",
         "title": "Docker",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 2,
         "type": "CORE",
         "number": "02",
         "title": "Object Oriented PHP with Version Control",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 3,
         "type": "CORE",
         "number": "03",
         "title": "Web Services with Plain PHP and JavaScript",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 4,
         "type": "CORE",
         "number": "04",
         "title": "Composer and Views in MVC",
-        "code": true,
-        "interview": true,
+        "code": false,
+        "interview": false,
         "quiz": false,
         "completed": false
       },
@@ -55,7 +55,7 @@
         "type": "CORE",
         "number": "05",
         "title": "Sessions and Cookies",
-        "code": true,
+        "code": false,
         "interview": false,
         "quiz": false,
         "completed": false
@@ -95,10 +95,10 @@
         "type": "ADV",
         "number": "",
         "title": "CI/CD mit Github",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 10,
@@ -145,10 +145,10 @@
         "type": "ADV",
         "number": "",
         "title": "GIT Expert",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 15,
@@ -408,67 +408,67 @@
         "type": "CORE",
         "number": "01",
         "title": "JavaScript Basics 4th Grade",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 2,
         "type": "CORE",
         "number": "02",
         "title": "JavaScript Working with Objects",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 3,
         "type": "CORE",
         "number": "03",
         "title": "JavaScript Modules",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 4,
         "type": "ADV",
         "number": "04",
         "title": "JavaScript Classes",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 5,
         "type": "CORE",
         "number": "05",
         "title": "Vue App Template",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 6,
         "type": "CORE",
         "number": "06",
         "title": "Todo App",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 7,
         "type": "ADV",
         "number": "07",
         "title": "Linting und Debugging vue.js",
-        "code": true,
+        "code": false,
         "interview": false,
         "quiz": false,
         "completed": false
@@ -478,8 +478,8 @@
         "type": "ADV",
         "number": "08",
         "title": "Todo App extended",
-        "code": true,
-        "interview": true,
+        "code": false,
+        "interview": false,
         "quiz": false,
         "completed": false
       },
@@ -488,7 +488,7 @@
         "type": "CORE",
         "number": "09",
         "title": "Registrationform",
-        "code": true,
+        "code": false,
         "interview": false,
         "quiz": false,
         "completed": false
@@ -498,7 +498,7 @@
         "type": "CORE",
         "number": "10",
         "title": "IP Address Lookup",
-        "code": true,
+        "code": false,
         "interview": false,
         "quiz": false,
         "completed": false
@@ -571,40 +571,40 @@
         "type": "CORE",
         "number": "01",
         "title": "General Basics",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 2,
         "type": "CORE",
         "number": "02",
         "title": "Installing WordPress",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 3,
         "type": "CORE",
         "number": "03",
         "title": "Creating and Managing Content in WordPress",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 4,
         "type": "CORE",
         "number": "04",
         "title": "Setting up Plugins in WordPress",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 5,
@@ -621,10 +621,10 @@
         "type": "ADV",
         "number": "",
         "title": "Accessibility in WordPress with the help of a plugin",
-        "code": true,
-        "interview": true,
-        "quiz": true,
-        "completed": true
+        "code": false,
+        "interview": false,
+        "quiz": false,
+        "completed": false
       },
       {
         "id": 7,
